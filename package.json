@@ -1,7 +1,19 @@
 {
-  "name": "pay-management-ex",
+  "name": "react-typescript-webpack-babel7-template",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "dev-build": "webpack --config webpack.config.development.js",
+    "dev-start": "webpack-dev-server --open --mode development --config webpack.config.development.js",
+    "prod-build": "webpack --config webpack.config.production.js"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@src": "./src",
+    "@components": "./src/components",
+    "@dialogs": "./src/dialogs",
+    "@assets": "./src/assets"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -10,16 +22,36 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "antd": "^4.2.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
-    "typescript": "~3.7.2"
+    "webpack-dev-server": "3.10.3"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
+    "@babel/preset-typescript": "^7.9.0",
+    "@typescript-eslint/eslint-plugin": "^2.32.0",
+    "@typescript-eslint/parser": "^2.32.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "css-loader": "^3.5.3",
+    "eslint": "^6.0.0",
+    "file-loader": "^6.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.2.1",
+    "ts-loader": "^7.0.4",
+    "typescript": "~3.7.2",
+    "url-loader": "^4.1.0",
+    "webpack": "4.42.0",
+    "webpack-cli": "^3.3.11"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +67,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "ant.design",
+    "typescript",
+    "webpack",
+    "babel"
+  ]
 }
